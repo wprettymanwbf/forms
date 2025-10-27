@@ -16,3 +16,4 @@ This document contains resources and links related to the Cerm API.
 
 ## Additional Resources
 - Links to official documentation, tutorials, and community forums.
+- [Cerm API REST Portal Reference Page](https://example.com/cerm-api-rest-portal)
