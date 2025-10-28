@@ -56,6 +56,12 @@
     .upper-form .section {
       flex: 1 1 300px;
     }
+    /* Full-width section for Description */
+    .upper-form .section-wide {
+      flex: 1 1 100%;
+      width: 100%;
+      max-width: 100%;
+    }
     /* Quantities to Quote layout */
     .quantities-grid {
       display: flex;
@@ -98,6 +104,13 @@
 
   <form id="quoteForm" action="#" method="post">
     <div class="upper-form">
+      <!-- Section: Description (full width) -->
+      <div class="section section-wide">
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" />
+        </div>
+      </div>
       <!-- Section: Shape -->
       <div class="section">
         <h6 class="section-title">Shape</h6>
@@ -275,6 +288,7 @@
   "label-shape": "LabelShape",
   "cutting-die": "LabelSizeType",
       "corners": "Corners",
+    "description": "Description",
   "material": "Material/Substrate",
       "label-width": "LabelWidth(in)",
       "label-height": "LabelHeight(in)",
