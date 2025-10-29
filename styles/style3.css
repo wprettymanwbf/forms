@@ -411,3 +411,34 @@ body ul li a:focus {
   outline: 3px solid #0066cc;
   outline-offset: 2px;
 }
+
+/* Label Quote Form specific styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+form input[type="number"],
+form input[type="file"],
+form select {
+  width: 100%;
+  padding: 6px;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  width: auto;
+  padding: 8px 20px;
+}
