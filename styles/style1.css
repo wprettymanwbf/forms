@@ -130,3 +130,8 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: translateY(0);
 }
+
+/* Style Switcher Section */
+ul.style-switcher {
+    margin-top: 30px;
+}

@@ -21,7 +21,7 @@ body {
 
 /* Main Container */
 h1 {
-    color: #0f3460;
+    color: #e8f1f8;
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5em;
@@ -144,4 +144,9 @@ button[type="submit"]:active {
 select option {
     background: #0f3460;
     color: #eaeaea;
+}
+
+/* Style Switcher Section */
+ul.style-switcher {
+    margin-top: 30px;
 }

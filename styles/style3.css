@@ -149,3 +149,8 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: scale(0.98);
 }
+
+/* Style Switcher Section */
+ul.style-switcher {
+    margin-top: 30px;
+}
