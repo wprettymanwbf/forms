@@ -1,0 +1,135 @@
+/**
+ * San Francisco Font Stylesheet
+ * 
+ * This stylesheet applies the San Francisco (SF Pro) font family as the primary
+ * typeface for the entire document. It includes proper fallback fonts and
+ * follows modern CSS best practices for performance and maintainability.
+ * 
+ * Font Family: San Francisco (SF Pro)
+ * Source: Apple's system font
+ * Note: This font is natively available on Apple devices (iOS, macOS).
+ *       For non-Apple devices, the comprehensive fallback system ensures
+ *       high-quality typography across all platforms.
+ */
+
+/**
+ * Root-level font configuration
+ * Sets San Francisco as the primary font with appropriate fallbacks
+ * The fallback system prioritizes system fonts for optimal performance
+ */
+:root {
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/**
+ * Apply San Francisco font to the entire document
+ * Ensures consistent typography across all elements
+ * Includes accessibility considerations for readability
+ */
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Headings
+ * Apply San Francisco with appropriate weights for visual hierarchy
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.02em;
+}
+
+/**
+ * Form elements
+ * Ensure form inputs, selects, and textareas use San Francisco font
+ */
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+/**
+ * Code and preformatted text
+ * Keep monospace fonts for code blocks
+ * Note: SF Mono is not explicitly defined here, so it will fall back
+ * to system monospace fonts and then generic monospace
+ */
+code,
+pre,
+kbd,
+samp {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', 'Courier New', Courier,
+    'Liberation Mono', monospace;
+}
+
+/**
+ * Strong and bold text
+ * Use bold weight for emphasis
+ */
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+ * Emphasis and italic text
+ * Maintain italic variants
+ */
+em,
+i {
+  font-style: italic;
+}
+
+/**
+ * Tables
+ * Apply San Francisco font to table elements for consistency
+ */
+table,
+th,
+td {
+  font-family: var(--font-primary);
+}
+
+/**
+ * Performance and Compatibility Notes
+ * 
+ * San Francisco (SF Pro) is Apple's system font and is automatically available
+ * on all Apple devices (macOS, iOS, iPadOS, watchOS, tvOS) without requiring
+ * any font loading or external resources.
+ * 
+ * The fallback system ensures optimal typography on all platforms:
+ * - -apple-system: Selects San Francisco on Apple devices
+ * - BlinkMacSystemFont: Alternative selector for San Francisco on macOS
+ * - Segoe UI: Windows system font (Windows Vista+)
+ * - Roboto: Android system font
+ * - Helvetica Neue: Fallback for older Apple devices
+ * - Arial: Universal fallback
+ * - sans-serif: Generic fallback
+ * 
+ * This approach provides:
+ * 1. Zero network overhead (no font downloads required)
+ * 2. Instant rendering (no FOIT or FOUT)
+ * 3. Native performance on each platform
+ * 4. Consistent, high-quality typography across all devices
+ * 5. Maximum compatibility with modern web standards
+ */
