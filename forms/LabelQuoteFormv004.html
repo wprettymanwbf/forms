@@ -83,7 +83,7 @@
       gap: 10px;
     }
 
-    .quantities-grid input[type="number"] {
+    .quantities-grid input {
       width: 10ch;
       text-align: right;
     }
@@ -273,11 +273,11 @@
         <div class="form-group">
           <label>Quantities to Quote</label>
           <div class="quantities-grid">
-            <input type="number" id="quantity1" name="quantity1" min="0" step="1" placeholder="-" />
-            <input type="number" id="quantity2" name="quantity2" min="0" step="1" placeholder="-" />
-            <input type="number" id="quantity3" name="quantity3" min="0" step="1" placeholder="-" />
-            <input type="number" id="quantity4" name="quantity4" min="0" step="1" placeholder="-" />
-            <input type="number" id="quantity5" name="quantity5" min="0" step="1" placeholder="-" />
+            <input type="text" id="quantity1" name="quantity1" inputmode="numeric" pattern="[0-9]*" placeholder="-" />
+            <input type="text" id="quantity2" name="quantity2" inputmode="numeric" pattern="[0-9]*" placeholder="-" />
+            <input type="text" id="quantity3" name="quantity3" inputmode="numeric" pattern="[0-9]*" placeholder="-" />
+            <input type="text" id="quantity4" name="quantity4" inputmode="numeric" pattern="[0-9]*" placeholder="-" />
+            <input type="text" id="quantity5" name="quantity5" inputmode="numeric" pattern="[0-9]*" placeholder="-" />
           </div>
         </div>
         <div class="form-group">
@@ -391,6 +391,35 @@
       }
     }
 
+    // Quantity formatting helpers
+    function stripNonDigits(str) {
+      if (str === undefined || str === null) return '';
+      return String(str).replace(/[^0-9]/g, '');
+    }
+
+    function formatIntegerWithCommas(value) {
+      const digits = stripNonDigits(value);
+      if (!digits) return '';
+      return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function handleQuantityInputEvent(e) {
+      const el = e.target;
+      if (e.type === 'input') {
+        // remove any non-digit characters while typing
+        const cleaned = stripNonDigits(el.value);
+        // keep caret position as reasonable (simple approach)
+        el.value = cleaned;
+      } else if (e.type === 'focus') {
+        // remove formatting when editing
+        el.value = stripNonDigits(el.value);
+      } else if (e.type === 'blur') {
+        // format with commas on blur
+        el.value = formatIntegerWithCommas(el.value);
+        autoSave();
+      }
+    }
+
     function updateCurrentDateTime(){
       const now = new Date();
       const el = document.getElementById("currentDateTime");
@@ -429,6 +458,21 @@
           if (inp.value) {
             inp.value = formatDimensionValue(inp.value);
           }
+        }
+        // Add event listeners for quantity fields to sanitize and format with commas
+        if (['quantity1','quantity2','quantity3','quantity4','quantity5'].includes(inp.id)) {
+          inp.addEventListener('input', handleQuantityInputEvent);
+          inp.addEventListener('focus', handleQuantityInputEvent);
+          inp.addEventListener('blur', handleQuantityInputEvent);
+          // Format any saved values
+          if (inp.value) {
+            inp.value = formatIntegerWithCommas(inp.value);
+          }
+        }
+        // Keep the versions input as numeric (no commas) but ensure it's saved/formatted as integer
+        if (inp.id === 'versions') {
+          inp.addEventListener('input', function(){ this.value = stripNonDigits(this.value); autoSave(); });
+          if (inp.value) inp.value = stripNonDigits(inp.value);
         }
       });
       // Corners visibility based on shape
