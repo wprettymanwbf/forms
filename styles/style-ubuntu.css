@@ -1,0 +1,126 @@
+/**
+ * Ubuntu Font Stylesheet
+ * 
+ * This stylesheet imports and applies the Ubuntu font family as the primary
+ * typeface for the entire document. It includes proper fallback fonts and
+ * follows modern CSS best practices for performance and maintainability.
+ * 
+ * Font Family: Ubuntu
+ * Source: Google Fonts
+ * License: Ubuntu Font License
+ */
+
+/* Import Ubuntu font from Google Fonts with optimized loading */
+/* Using font-display: swap for better performance and user experience */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/**
+ * Root-level font configuration
+ * Sets Ubuntu as the primary font with appropriate fallbacks
+ */
+:root {
+  --font-primary: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+/**
+ * Apply Ubuntu font to the entire document
+ * Ensures consistent typography across all elements
+ * Includes accessibility considerations for readability
+ */
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Headings
+ * Apply Ubuntu with appropriate weights for visual hierarchy
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/**
+ * Form elements
+ * Ensure form inputs, selects, and textareas use Ubuntu font
+ */
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+/**
+ * Code and preformatted text
+ * Keep monospace fonts for code blocks
+ * Note: Ubuntu Mono is not imported in this stylesheet, so it will fall back
+ * to system monospace fonts and then generic monospace
+ */
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Courier New', Courier, 'Liberation Mono', Monaco, monospace;
+}
+
+/**
+ * Strong and bold text
+ * Use medium weight for subtle emphasis or bold for stronger emphasis
+ */
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+ * Emphasis and italic text
+ * Maintain italic variants
+ */
+em,
+i {
+  font-style: italic;
+}
+
+/**
+ * Tables
+ * Apply Ubuntu font to table elements for consistency
+ */
+table,
+th,
+td {
+  font-family: var(--font-primary);
+}
+
+/**
+ * Performance optimization
+ * Use font-display: swap in @import to prevent invisible text during loading
+ * This is already handled in the @import declaration above
+ * 
+ * Alternative approach using @font-face (commented out):
+ * 
+ * @font-face {
+ *   font-family: 'Ubuntu';
+ *   font-style: normal;
+ *   font-weight: 400;
+ *   font-display: swap;
+ *   src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcg72j00.woff2) format('woff2');
+ * }
+ */

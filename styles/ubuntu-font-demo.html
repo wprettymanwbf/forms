@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubuntu Font Demo</title>
+  <!-- Preconnect to Google Fonts for better performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style-ubuntu.css">
+  <style>
+    /* Demo-specific styles */
+    body {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .demo-section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .font-showcase {
+      margin: 20px 0;
+    }
+    .weight-demo {
+      margin: 10px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f8f8f8;
+      font-weight: 500;
+    }
+    .form-demo {
+      margin: 20px 0;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-section">
+    <h1>Ubuntu Font Implementation Demo</h1>
+    <p>
+      This demo showcases the Ubuntu font family as implemented in 
+      <code>style-ubuntu.css</code>. The Ubuntu font is a modern, 
+      humanist sans-serif typeface designed for clarity and legibility.
+    </p>
+  </div>
+
+  <div class="demo-section">
+    <h2>Typography Hierarchy</h2>
+    
+    <div class="font-showcase">
+      <h1>Heading 1 - Ubuntu Font</h1>
+      <h2>Heading 2 - Ubuntu Font</h2>
+      <h3>Heading 3 - Ubuntu Font</h3>
+      <h4>Heading 4 - Ubuntu Font</h4>
+      <h5>Heading 5 - Ubuntu Font</h5>
+      <h6>Heading 6 - Ubuntu Font</h6>
+    </div>
+
+    <p>
+      Regular paragraph text using Ubuntu font. The quick brown fox jumps over 
+      the lazy dog. <strong>This text is bold.</strong> <em>This text is 
+      italicized.</em> <strong><em>This text is bold and italicized.</em></strong>
+    </p>
+  </div>
+
+  <div class="demo-section">
+    <h2>Font Weights</h2>
+    
+    <div class="weight-demo" style="font-weight: 300;">
+      Light (300) - The quick brown fox jumps over the lazy dog
+    </div>
+    <div class="weight-demo" style="font-weight: 400;">
+      Regular (400) - The quick brown fox jumps over the lazy dog
+    </div>
+    <div class="weight-demo" style="font-weight: 500;">
+      Medium (500) - The quick brown fox jumps over the lazy dog
+    </div>
+    <div class="weight-demo" style="font-weight: 700;">
+      Bold (700) - The quick brown fox jumps over the lazy dog
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <h2>Form Elements</h2>
+    
+    <form class="form-demo">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country">
+          <option>United States</option>
+          <option>Canada</option>
+          <option>United Kingdom</option>
+          <option>Australia</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+      </div>
+      
+      <button type="submit">Submit Form</button>
+    </form>
+  </div>
+
+  <div class="demo-section">
+    <h2>Table Example</h2>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Label A</td>
+          <td>100</td>
+          <td>$50.00</td>
+        </tr>
+        <tr>
+          <td>Label B</td>
+          <td>250</td>
+          <td>$125.00</td>
+        </tr>
+        <tr>
+          <td>Label C</td>
+          <td>500</td>
+          <td>$200.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="demo-section">
+    <h2>Code Example</h2>
+    
+    <p>
+      Inline code: <code>const font = 'Ubuntu';</code>
+    </p>
+    
+    <pre><code>// Ubuntu Mono font for code blocks
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('Ubuntu'));</code></pre>
+  </div>
+
+  <div class="demo-section">
+    <h2>Implementation Details</h2>
+    
+    <ul>
+      <li><strong>Font Source:</strong> Google Fonts</li>
+      <li><strong>Primary Font:</strong> Ubuntu (with system font fallbacks)</li>
+      <li><strong>Font Weights:</strong> 300 (Light), 400 (Regular), 500 (Medium), 700 (Bold)</li>
+      <li><strong>Font Display:</strong> swap (for optimal performance)</li>
+      <li><strong>Fallback Fonts:</strong> System fonts and sans-serif</li>
+      <li><strong>License:</strong> Ubuntu Font License</li>
+    </ul>
+  </div>
+</body>
+</html>
