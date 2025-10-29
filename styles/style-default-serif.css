@@ -1,0 +1,10 @@
+/**
+ * Default Serif Font Stylesheet
+ * 
+ * This stylesheet applies a default serif font family to the entire document.
+ * It provides a clean, modular approach to typography without additional styling.
+ */
+
+body {
+  font-family: serif;
+}
