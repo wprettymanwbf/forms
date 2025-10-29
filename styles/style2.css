@@ -1,0 +1,437 @@
+/**
+ * Style 2: Dark Mode
+ * A modern dark theme with reduced eye strain for extended viewing
+ */
+
+body {
+  font-family: Calibri, sans-serif;
+  margin: 0;
+  padding: 20px;
+  font-size: 0.875rem;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Ensure all header cells in dynamic rows have the same styling as the upper labels */
+.form-header > div,
+.form-row > div {
+  font-family: Calibri, sans-serif;
+  font-size: 0.75rem;
+}
+
+/* General styling for select elements */
+select {
+  font-family: Calibri, sans-serif;
+  font-size: 0.875rem;
+  padding: 4px;
+  width: 100%;
+  border: 1px solid #555;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+/* Form Title (h5) */
+h5.form-title {
+  margin: 0 0 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #4db8ff;
+}
+
+/* Upper part responsive container */
+.upper-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.upper-form .section {
+  flex: 1 1 300px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin: 0 0 2px 0;
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: #b0b0b0;
+}
+
+/* New Ship Via Section */
+.ship-via {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ship-via-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 150px;
+}
+
+.ship-via-group label {
+  margin: 0 0 2px 0;
+  font-weight: normal;
+  font-size: 0.75rem;
+  text-align: left;
+  color: #b0b0b0;
+}
+
+.ship-via-group select,
+.ship-via-group input[type="text"] {
+  padding: 4px;
+  border: 1px solid #555;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+/* Dynamic Rows Section (Product Information) */
+h6.product-info-header {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  text-align: left;
+  color: #4db8ff;
+}
+
+.form-header,
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.quote-header {
+  width: 10ch;
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.product-description {
+  flex: 1;
+  text-align: center;
+}
+
+.quantity-header,
+.units-header,
+.price-header {
+  width: 10ch;
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.alt-bg {
+  background-color: #2a2a2a;
+}
+
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  font-family: Calibri, sans-serif;
+  font-size: 0.875rem;
+  padding: 4px;
+  border: 1px solid #555;
+  border-radius: 0;
+  box-sizing: border-box;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+  min-height: 1.5em;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+/* Price per Unit container */
+.price-container {
+  display: flex;
+  align-items: flex-start;
+  width: 10ch;
+}
+
+.price-container span {
+  display: inline-block;
+  width: 1ch;
+  margin-right: 2px;
+  white-space: nowrap;
+  color: #e0e0e0;
+}
+
+.price-container input {
+  width: calc(100% - 1ch);
+  flex: 1;
+}
+
+/* Notes / Special Instructions */
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.notes-container label {
+  margin: 0 0 2px 0;
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: #b0b0b0;
+}
+
+.notes-container textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 4px;
+  border: 1px solid #555;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: Calibri, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+}
+
+/* Order Submitted by */
+.order-submitted {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.order-submitted label {
+  margin: 0 0 2px 0;
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: #b0b0b0;
+}
+
+.order-submitted input[type="text"] {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #555;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-family: Calibri, sans-serif;
+  font-size: 0.875rem;
+}
+
+/* Additional Charges Section */
+h6.additional-charges-title {
+  margin: 20px 0 10px;
+  font-size: 1rem;
+  text-align: left;
+  color: #4db8ff;
+}
+
+/* Dynamic Rows Section (Additional Charges) */
+.charge-header,
+.charge-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.charge-quote,
+.charge-quantity,
+.charge-units,
+.charge-price {
+  width: 10ch;
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.charge-description {
+  flex: 1;
+  text-align: center;
+}
+
+.charge-description::before {
+  content: "Description";
+}
+
+.charge-description {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: Calibri, sans-serif;
+  font-size: 0.875rem;
+  padding: 6px 12px;
+  margin-right: 5px;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a4a4a;
+}
+
+/* Current Date and Time element */
+#currentDateTime {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.75rem;
+  text-align: right;
+  color: #b0b0b0;
+}
+
+/* Style Switcher */
+#styleSwitcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2d2d2d;
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+#styleSwitcher label {
+  font-size: 0.75rem;
+  font-weight: normal;
+  margin: 0;
+  color: #b0b0b0;
+}
+
+#styleSelect {
+  font-family: Calibri, sans-serif;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  button {
+    display: none;
+  }
+  #styleSwitcher {
+    display: none;
+  }
+  .upper-form {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .upper-form .section {
+    flex: 1 1 33.33%;
+  }
+  .ship-via {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .ship-via-group {
+    flex: 1 1 25%;
+  }
+  #currentDateTime {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+  }
+  ::-webkit-input-placeholder { color: transparent !important; }
+  ::-moz-placeholder { color: transparent !important; }
+  :-ms-input-placeholder { color: transparent !important; }
+  ::placeholder { color: transparent !important; }
+  input[type="date"]:not(:valid)::-webkit-datetime-edit,
+  input[type="date"]:not(:valid)::-webkit-datetime-edit-text,
+  input[type="date"]:not(:valid)::-webkit-datetime-edit-month-field,
+  input[type="date"]:not(:valid)::-webkit-datetime-edit-day-field,
+  input[type="date"]:not(:valid)::-webkit-datetime-edit-year-field {
+    color: transparent !important;
+  }
+}
+
+/* Basic page styles for simple HTML pages */
+body h1 {
+  color: #4db8ff;
+  margin-bottom: 10px;
+}
+
+body p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+body ul li {
+  margin-bottom: 8px;
+}
+
+body ul li a {
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+body ul li a:hover {
+  text-decoration: underline;
+  color: #99ddff;
+}
+
+/* Label Quote Form specific styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #b0b0b0;
+}
+
+form input[type="number"],
+form input[type="file"],
+form select {
+  width: 100%;
+  padding: 6px;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  width: auto;
+  padding: 8px 20px;
+}
