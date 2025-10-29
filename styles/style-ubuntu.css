@@ -31,10 +31,13 @@
 /**
  * Apply Ubuntu font to the entire document
  * Ensures consistent typography across all elements
+ * Includes accessibility considerations for readability
  */
 body {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -67,13 +70,15 @@ button {
 
 /**
  * Code and preformatted text
- * Keep monospace fonts for code blocks, but still within the design system
+ * Keep monospace fonts for code blocks
+ * Note: Ubuntu Mono is not imported in this stylesheet, so it will fall back
+ * to system monospace fonts and then generic monospace
  */
 code,
 pre,
 kbd,
 samp {
-  font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, 'Liberation Mono', Monaco, monospace;
 }
 
 /**
@@ -102,15 +107,6 @@ table,
 th,
 td {
   font-family: var(--font-primary);
-}
-
-/**
- * Accessibility considerations
- * Ensure proper line height and letter spacing for readability
- */
-body {
-  line-height: 1.6;
-  letter-spacing: 0.01em;
 }
 
 /**

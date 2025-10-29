@@ -28,6 +28,10 @@ A comprehensive stylesheet that implements the Ubuntu font as the primary typefa
 Include the stylesheet in your HTML document:
 
 ```html
+<!-- Optional: Preconnect to Google Fonts for better performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Include the Ubuntu font stylesheet -->
 <link rel="stylesheet" href="styles/style-ubuntu.css">
 ```
 
