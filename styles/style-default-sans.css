@@ -1,0 +1,10 @@
+/**
+ * Default Sans-Serif Font Stylesheet
+ * 
+ * This stylesheet provides a default sans-serif font family
+ * for the entire document, following modern web standards.
+ */
+
+body {
+  font-family: sans-serif;
+}
