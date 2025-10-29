@@ -1,0 +1,11 @@
+/**
+ * Default Monospace Font Stylesheet
+ * 
+ * This stylesheet sets the default monospace font for the entire document.
+ * It provides a clean, modular approach to applying a monospace font family
+ * to all content.
+ */
+
+body {
+  font-family: monospace;
+}
