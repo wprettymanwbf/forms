@@ -15,7 +15,7 @@ body {
 .form-group label {
   margin: 0 0 2px 0;
   font-weight: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 /* Inputs */
@@ -76,6 +76,18 @@ h5.form-title {
   text-align: right;
 }
 
+.form-divider {
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.notes-section {
+  width: 100%;
+  padding: 0 0 10px 0;
+}
+
 .form-note {
   font-size: 0.875rem;
   font-style: italic;
@@ -93,7 +105,7 @@ button {
 /* Subsection titles */
 h6.section-title {
   margin: 4px 0 2px;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: normal;
 }
 
