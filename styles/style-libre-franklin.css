@@ -1,0 +1,131 @@
+/**
+ * Libre Franklin Font Stylesheet
+ * 
+ * This stylesheet applies the Libre Franklin font family as the primary
+ * typeface for the entire document. It includes proper fallback fonts and
+ * follows modern CSS best practices for performance and maintainability.
+ * 
+ * Font Family: Libre Franklin
+ * Source: Google Fonts
+ * License: Open Font License
+ */
+
+/**
+ * Root-level font configuration
+ * Sets Libre Franklin as the primary font with appropriate fallbacks
+ * The fallback system prioritizes system fonts for optimal performance
+ */
+:root {
+  --font-primary: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/**
+ * Apply Libre Franklin font to the entire document
+ * Ensures consistent typography across all elements
+ * Includes accessibility considerations for readability
+ */
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Headings
+ * Apply Libre Franklin with appropriate weights for visual hierarchy
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+}
+
+/**
+ * Form elements
+ * Ensure form inputs, selects, and textareas use Libre Franklin font
+ */
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+/**
+ * Code and preformatted text
+ * Keep monospace fonts for code blocks
+ */
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Monaco', 'Consolas', 'Courier New', Courier,
+    'Liberation Mono', monospace;
+}
+
+/**
+ * Strong and bold text
+ * Use bold weight for emphasis
+ */
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+ * Emphasis and italic text
+ * Maintain italic variants
+ */
+em,
+i {
+  font-style: italic;
+}
+
+/**
+ * Tables
+ * Apply Libre Franklin font to table elements for consistency
+ */
+table,
+th,
+td {
+  font-family: var(--font-primary);
+}
+
+/**
+ * Performance and Compatibility Notes
+ * 
+ * Libre Franklin is loaded from Google Fonts for maximum compatibility
+ * and availability across all platforms. The font is open source and
+ * designed as a reinterpretation of the classic Franklin Gothic.
+ * 
+ * The fallback system ensures optimal typography on all platforms:
+ * - -apple-system: System font on Apple devices
+ * - BlinkMacSystemFont: Alternative selector for system font on macOS
+ * - Segoe UI: Windows system font (Windows Vista+)
+ * - Roboto: Android system font
+ * - Helvetica Neue: Fallback for older Apple devices
+ * - Arial: Universal fallback
+ * - sans-serif: Generic fallback
+ * 
+ * This approach provides:
+ * 1. High-quality typography with Libre Franklin
+ * 2. Fast loading with font-display: swap
+ * 3. Graceful fallbacks across all devices
+ * 4. Consistent, readable typography
+ * 5. Maximum compatibility with modern web standards
+ */

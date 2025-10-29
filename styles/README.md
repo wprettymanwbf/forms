@@ -4,6 +4,39 @@ This directory contains CSS stylesheets for the forms repository.
 
 ## Files
 
+### style-libre-franklin.css
+
+A comprehensive stylesheet that implements the Libre Franklin font as the primary typeface for web documents.
+
+#### Features
+
+- **Font Source**: Google Fonts (reliable CDN with global availability)
+- **Font Family**: Libre Franklin with multiple weights (300, 400, 500, 600, 700)
+- **Performance**: Uses `font-display: swap` for optimal loading performance
+- **Fallback Fonts**: Comprehensive system font stack including:
+  - -apple-system (iOS/macOS)
+  - BlinkMacSystemFont (macOS)
+  - Segoe UI (Windows)
+  - Roboto (Android)
+  - And more, with `sans-serif` as final fallback
+- **CSS Variables**: Uses CSS custom properties for maintainability
+- **Coverage**: Applies to body, headings, form elements, tables, and more
+- **Accessibility**: Proper line-height and letter-spacing for readability
+
+### style-san-francisco.css
+
+A comprehensive stylesheet that implements the San Francisco (SF Pro) font as the primary typeface for web documents.
+
+#### Features
+
+- **Font Source**: Apple's system font (native on Apple devices)
+- **Font Family**: San Francisco (SF Pro) with multiple weights
+- **Performance**: Zero network overhead (native system font)
+- **Fallback Fonts**: Comprehensive system font stack
+- **CSS Variables**: Uses CSS custom properties for maintainability
+- **Coverage**: Full document styling with native performance
+- **Accessibility**: Optimized for Apple's ecosystem
+
 ### style-ubuntu.css
 
 A comprehensive stylesheet that implements the Ubuntu font as the primary typeface for web documents.
@@ -52,16 +85,55 @@ Or import it in your main CSS file:
 The Ubuntu font is licensed under the Ubuntu Font License.
 More information: https://ubuntu.com/legal/font-licence
 
-### ubuntu-font-demo.html
+## Demo Files
 
-A demonstration page showcasing the Ubuntu font implementation with:
+### Font Implementation Demos
+
+#### style-libre-franklin-demo.html
+A demonstration page showcasing the Libre Franklin font implementation.
+
+#### style-san-francisco-demo.html
+A demonstration page showcasing the San Francisco font implementation.
+
+#### style-ubuntu-demo.html
+A demonstration page showcasing the Ubuntu font implementation.
+
+Each font demo includes:
 - Typography hierarchy (h1-h6)
-- Font weights (300, 400, 500, 700)
+- Font weights demonstration
 - Form elements styling
 - Table formatting
 - Code block examples
 
-To view the demo, open `ubuntu-font-demo.html` in a web browser.
+### Default Font Demos
+
+#### style-default-serif-demo.html
+A demonstration of the default system serif font implementation.
+
+#### style-default-sans-demo.html
+A demonstration of the default system sans-serif font implementation.
+
+#### style-default-monospace-demo.html
+A demonstration of the default system monospace font implementation.
+
+Each default font demo shows:
+- Basic typography hierarchy
+- Text styling examples
+- Simple layout examples
+- System font characteristics
+
+### Forms Style Demo
+
+#### style-forms-demo.html
+A comprehensive demonstration of form styling and layout features:
+- Form element styling
+- Responsive layouts
+- Input types and variations
+- Grid layouts
+- Notes and dividers
+- Print-friendly styles
+
+To view any demo, open the corresponding demo file in a web browser.
 
 ## Best Practices
 
@@ -108,7 +180,7 @@ To apply the Ubuntu font to existing HTML forms in the repository:
 
 To test the implementation:
 
-1. Open `ubuntu-font-demo.html` in a web browser
+1. Open the corresponding demo file (e.g., `style-ubuntu-demo.html`) in a web browser
 2. Verify that the Ubuntu font loads correctly
 3. Test with network throttling to ensure fallback fonts work
 4. Check various font weights and styles render properly

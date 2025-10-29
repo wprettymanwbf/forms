@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms Style Demo</title>
+  <link rel="stylesheet" href="style-forms.css">
+  <style>
+    /* Additional demo-specific styles */
+    body {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #f5f5f5;
+    }
+    .demo-section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-section">
+    <h5 class="form-title">Forms Style Implementation Demo</h5>
+    <p>
+      This demo showcases the form styles implemented in 
+      <code>style-forms.css</code>. It demonstrates various form elements
+      and their responsive layout behavior.
+    </p>
+  </div>
+
+  <div class="demo-section">
+    <h6 class="section-title">Basic Form Elements</h6>
+    
+    <div class="upper-form">
+      <div class="section">
+        <div class="form-group">
+          <label for="text-input">Text Input</label>
+          <input type="text" id="text-input" placeholder="Enter text">
+        </div>
+
+        <div class="form-group">
+          <label for="number-input">Number Input</label>
+          <input type="number" id="number-input" placeholder="Enter number">
+        </div>
+
+        <div class="form-group">
+          <label for="select-input">Select Input</label>
+          <select id="select-input">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="form-group">
+          <label for="file-input">File Input</label>
+          <input type="file" id="file-input">
+        </div>
+
+        <div class="form-group">
+          <label for="textarea-input">Textarea Input</label>
+          <textarea id="textarea-input" rows="4" placeholder="Enter multiple lines of text"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <h6 class="section-title">Quantities Grid Example</h6>
+    
+    <div class="quantities-grid">
+      <div class="form-group">
+        <label for="quantity1">Quantity 1</label>
+        <input type="number" id="quantity1" value="100">
+      </div>
+      
+      <div class="form-group">
+        <label for="quantity2">Quantity 2</label>
+        <input type="number" id="quantity2" value="250">
+      </div>
+      
+      <div class="form-group">
+        <label for="quantity3">Quantity 3</label>
+        <input type="number" id="quantity3" value="500">
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <h6 class="section-title">Wide Section Example</h6>
+    
+    <div class="upper-form">
+      <div class="section-wide">
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3" placeholder="Enter a full-width description"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-section">
+    <div class="form-divider"></div>
+    
+    <div class="notes-section">
+      <p class="form-note">This is an example of a form note with italic styling.</p>
+    </div>
+
+    <button type="submit">Submit Form</button>
+    <button type="button">Cancel</button>
+  </div>
+
+  <div class="demo-section">
+    <h6 class="section-title">Implementation Details</h6>
+    <ul>
+      <li><strong>Responsive Layout:</strong> Flexbox-based responsive form layout</li>
+      <li><strong>Input Styling:</strong> Consistent styling across all form elements</li>
+      <li><strong>Typography:</strong> Clean, readable font sizing and spacing</li>
+      <li><strong>Print Styles:</strong> Optimized for printing with hidden placeholders</li>
+      <li><strong>Sections:</strong> Flexible section layouts with proper spacing</li>
+      <li><strong>Accessibility:</strong> Proper label associations and focus states</li>
+    </ul>
+  </div>
+</body>
+</html>
