@@ -2,6 +2,12 @@
 
 This document contains resources and links related to the Cerm API.
 
+CERM REST API HELP PORTAL
+https://secure.cerm.be/hd/RESTServicesHelp/apis/
+
+Parameter API Help
+https://secure.cerm.be/hd/RESTServicesHelp/apis/parameter-v1
+
 ## Overview
 - Brief description of the Cerm API.
 
