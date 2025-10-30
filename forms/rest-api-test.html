@@ -125,6 +125,17 @@
           return;
         }
 
+        // Sort rows by the "name" column (case-insensitive, numeric-aware). Tie-breaker: id.
+        rows.sort((a, b) => {
+          const an = (a && typeof a === 'object' && a.name != null) ? String(a.name) : '';
+          const bn = (b && typeof b === 'object' && b.name != null) ? String(b.name) : '';
+          const cmp = an.localeCompare(bn, undefined, { numeric: true, sensitivity: 'base' });
+          if (cmp !== 0) return cmp;
+          const aid = (a && a.id != null) ? String(a.id) : '';
+          const bid = (b && b.id != null) ? String(b.id) : '';
+          return aid.localeCompare(bid, undefined, { numeric: true, sensitivity: 'base' });
+        });
+
         // Build a simple set of columns from top-level keys
         const allKeys = new Set();
         rows.forEach(obj => {
