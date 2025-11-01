@@ -136,43 +136,21 @@
           return aid.localeCompare(bid, undefined, { numeric: true, sensitivity: 'base' });
         });
 
-        // Build a simple set of columns from top-level keys
-        const allKeys = new Set();
-        rows.forEach(obj => {
-          if (obj && typeof obj === 'object') {
-            Object.keys(obj).forEach(k => allKeys.add(k));
-          }
-        });
-
-        // Prefer id and name first
-        const keys = Array.from(allKeys);
-        keys.sort((a, b) => {
-          const order = ['id', 'name'];
-          const ia = order.indexOf(a);
-          const ib = order.indexOf(b);
-          if (ia !== -1 && ib !== -1) return ia - ib;
-          if (ia !== -1) return -1;
-          if (ib !== -1) return 1;
-          return a.localeCompare(b);
-        });
-
-        // Header
+        // Header: only show the "name" column
         theadRowEl.innerHTML = '';
-        keys.forEach(k => {
+        {
           const th = document.createElement('th');
-          th.textContent = k;
+          th.textContent = 'name';
           theadRowEl.appendChild(th);
-        });
+        }
 
-        // Body
+        // Body: only show name values
         tbodyEl.innerHTML = '';
         rows.forEach(obj => {
           const tr = document.createElement('tr');
-          keys.forEach(k => {
-            const td = document.createElement('td');
-            td.textContent = stringifyCell(obj ? obj[k] : '');
-            tr.appendChild(td);
-          });
+          const td = document.createElement('td');
+          td.textContent = stringifyCell(obj && obj.name);
+          tr.appendChild(td);
           tbodyEl.appendChild(tr);
         });
 
